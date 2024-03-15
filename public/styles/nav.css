@@ -1,0 +1,10 @@
+nav {
+  min-height: 120px;
+  width: 100%;
+  background-color: #4056A1;
+  color: #FFFFFF;
+}
+nav span {
+  font-family: "Bungee", sans-serif;
+  margin: 1.5em;
+}
