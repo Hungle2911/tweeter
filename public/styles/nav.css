@@ -1,23 +1,32 @@
 nav {
-  min-height: 120px;
+  height: 120px;
   width: 100%;
   background-color: #4056A1;
   color: #FFFFFF;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 1.5em;
 }
 nav span {
   font-family: "Bungee", sans-serif;
-  margin: 1.5em;
 }
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-right: 1.5em;
   font-size: 20px;
 }
-i {
+.fa-solid {
   margin-top: -1em;
+}
+header {
+  height: 520px;
+  width: 100%;
+  background: orange;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(/images/pngtree-film-grain-particles-texture-effect-png-image_6214662.png)
 }
