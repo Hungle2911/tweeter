@@ -20,13 +20,3 @@ nav span {
 .fa-solid {
   margin-top: -1em;
 }
-header {
-  height: 520px;
-  width: 100%;
-  background: orange;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-image: url(/images/pngtree-film-grain-particles-texture-effect-png-image_6214662.png)
-}
