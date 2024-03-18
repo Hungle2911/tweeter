@@ -14,11 +14,11 @@
   padding-top: 16px;
   margin: auto;
 }
-button {
-  background-color: rgb(59, 59, 201);
+.tweet-button {
+  background-color: #3B3BC9;
   color:azure;
 }
 
-button:hover {
+.tweet-button:hover {
   background-color: #4056a1;
 }
