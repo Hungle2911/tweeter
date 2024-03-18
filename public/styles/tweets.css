@@ -1,0 +1,24 @@
+#tweet-text {
+  max-height: 32px;
+  width: 100%;
+  outline: none;
+  background: none;
+  border: none;
+  border-bottom: 3px solid black
+}
+.submit-tweet {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: "Bungee", sans-serif;
+  padding-top: 16px;
+  margin: auto;
+}
+button {
+  background-color: rgb(59, 59, 201);
+  color:azure;
+}
+
+button:hover {
+  background-color: #4056a1;
+}
