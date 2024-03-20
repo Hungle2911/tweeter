@@ -28,3 +28,6 @@ body {
   margin: auto;
   background-color: inherit;
  }
+ .red-counter {
+  color: red;
+ }

@@ -1,10 +1,12 @@
 #tweet-text {
-  max-height: 32px;
-  width: 100%;
+  max-height: 40px;
+  width: 45rem;
   outline: none;
   background: none;
   border: none;
-  border-bottom: 3px solid black
+  display: block;
+  border-bottom: 3px solid ;
+  resize: none;
 }
 .submit-tweet {
   display: flex;
@@ -17,6 +19,7 @@
 .tweet-button {
   background-color: #3B3BC9;
   color:azure;
+  border: none;
 }
 
 .tweet-button:hover {
