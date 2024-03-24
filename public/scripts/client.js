@@ -50,6 +50,10 @@ const loadTweets = () => {
   $('.tweet-form').on('submit', (event) => {
     event.preventDefault();
     const data = $('.tweet-form').serialize()
+    const tweetText = $('#tweet-text').val();
+    if (tweetText.trim().length === 0 || tweetText.length > 140) {
+      alert('Invalid Tweet')
+    } else {
     $.ajax({
       url: '/tweets',
       method: 'POST',
@@ -59,6 +63,6 @@ const loadTweets = () => {
         loadTweets(data)
       }
     });
-  })
+  }})
   loadTweets()
 })
