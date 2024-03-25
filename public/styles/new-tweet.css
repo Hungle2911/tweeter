@@ -25,3 +25,12 @@
 .tweet-button:hover {
   background-color: #4056a1;
 }
+.error {
+  border-left: 10px solid;
+  border-color: red;
+  background: rgb(251, 207, 207);
+  margin-top: 10px;
+  color: black;
+  font-size: 1.5rem;
+  padding: 1rem;
+}

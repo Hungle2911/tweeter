@@ -46,6 +46,8 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
+        <div id="long-error" class="error">Your tweet is too long. Please shorten it to 140 characters or less.</div>
+        <div id="short-error" class="error">Your tweet is empty. Please write something.</div>
         <h2>Compose Tweet</h2>
         <form action="/tweets" method="post" class="tweet-form">
           <label for="tweet-text"><strong>What are you humming about?</strong></label>

@@ -3,7 +3,7 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-
+$('.error').hide()
 $(document).ready(() => {
 const renderTweets = function(tweets) {
   $('.tweet-container').empty();
@@ -24,7 +24,7 @@ const createTweetElement = function(data) {
     <div class="username">${data.user.handle}</div>
   </header>
   <main>
-    <p>${data.content.text}</p>
+  <p>${$('<div>').text(data.content.text).html()}</p> 
     <hr>
   </main>
   <footer>
@@ -49,10 +49,13 @@ const loadTweets = () => {
 }
   $('.tweet-form').on('submit', (event) => {
     event.preventDefault();
+    $('.error').hide()
     const data = $('.tweet-form').serialize()
     const tweetText = $('#tweet-text').val();
-    if (tweetText.trim().length === 0 || tweetText.length > 140) {
-      alert('Invalid Tweet')
+    if (tweetText.trim().length === 0) {
+      $('#short-error').slideDown()
+    } else if (tweetText.length > 140) {
+      $('#long-error').slideDown()
     } else {
     $.ajax({
       url: '/tweets',
@@ -60,7 +63,7 @@ const loadTweets = () => {
       data: data,
       success: (data) => {
         console.log(`post request resolved successfully`);
-        loadTweets(data)
+        loadTweets()
       }
     });
   }})
