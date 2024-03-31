@@ -16,3 +16,9 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+
+## Final Product
+
+!["Tweeter's desktop layout"](./docs/desktop-tweeter.png)
+!["Tweeter's mobile layout"](./docs/mobile-tweeter.png)
+!["Tweeter's error display when characters doesn't satisfy the limit"](./docs/tweeter-error.png)
