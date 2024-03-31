@@ -5,6 +5,7 @@
  */
 $('.error').hide()
 $(document).ready(() => {
+  // Function to render tweets onto the page
 const renderTweets = function(tweets) {
   $('.tweet-container').empty();
   // loops through tweets
@@ -13,6 +14,7 @@ const renderTweets = function(tweets) {
     $('.tweet-container').prepend($tweet); 
   }
 }
+// Function to create HTML elements for a single tweet
 const createTweetElement = function(data) {
   const userTweet = $(`
   <article>
@@ -38,25 +40,31 @@ const createTweetElement = function(data) {
 </article>`)
 return userTweet
 }
+ // Function to load tweets from the server
 const loadTweets = () => {
   $.ajax({
     url: '/tweets',
     method: 'GET',
     success: (data) => {
       renderTweets(data);
+      $('#tweet-text').val(''); // Clear tweet input field
+      $('.counter').val(140); // Reset character counter
     }
   })
 }
   $('.tweet-form').on('submit', (event) => {
     event.preventDefault();
     $('.error').hide()
-    const data = $('.tweet-form').serialize()
+    // Serialize form data
+    const data = $('.tweet-form').serialize() 
+    // Validate tweet text length
     const tweetText = $('#tweet-text').val();
     if (tweetText.trim().length === 0) {
       $('#short-error').slideDown()
     } else if (tweetText.length > 140) {
       $('#long-error').slideDown()
     } else {
+    // If tweet is valid, send POST request to server
     $.ajax({
       url: '/tweets',
       method: 'POST',
@@ -67,5 +75,6 @@ const loadTweets = () => {
       }
     });
   }})
+  // Load tweets when the page is ready
   loadTweets()
 })
