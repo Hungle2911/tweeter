@@ -72,7 +72,10 @@ const loadTweets = () => {
       success: (data) => {
         console.log(`post request resolved successfully`);
         loadTweets()
-      }
+      },
+      error: (XMLHttpRequest, textStatus, errorThrown) => {
+        alert("Post failed, please try again");
+     }
     });
   }})
   // Load tweets when the page is ready
